@@ -8,6 +8,10 @@ title_description: "A dark blog theme for Jekyll focusing on a clear reading exp
 title_image: "http://www.gravatar.com/avatar/00000000000000000000000000000000?s=500&d=mm"
 google_analytics: "UA-20365477-4"
 disqus_account: leu_grady
+comments :
+	   provider : disqus
+  disqus :
+    short_name : layatjpy
 github_repository: https://github.com/llcc/layatjpy
 addthis_id:
 post_limit: 5
