@@ -8,7 +8,7 @@ tags: Org
 为了对比突出代码块与普通文本的区别，设置不同的底色是一个比较可行的方法。在.emacs文件中添加以下代码即可以上功能。或者在customize-org中查找org-block，然后选择自己喜欢的样式即可。org-mode总能给人惊喜！
 </p>
 
-{% highlight cl linenos %}
+{% highlight lisp linenos %}
 (setq org-src-fontify-natively t)
 (defface org-block-begin-line
   '((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
@@ -19,3 +19,4 @@ tags: Org
   '((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
   "Face used for the line delimiting the end of source blocks.")
 {% endhighlight %}
+
