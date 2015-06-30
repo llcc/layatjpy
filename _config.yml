@@ -1,19 +1,26 @@
-name: Leu Grady - Alloy Researcher
-markdown: redcarpet
-pygments: true
-timezone: Asian/Japanese
-permalink: /:title.html
-baseurl: /layatjpy/
-url: http://llcc.github.io
-paginate: 5
-paginate_path: 'page:num'
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
 
-# Permalinksxs
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Hyde
+tagline:          'A Jekyll theme'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              http://hyde.getpoole.com
+baseurl:          llcc.github.io/layatjpy/
 
 author:
   name:           'Mark Otto'
   url:            https://twitter.com/mdo
 
-github:
-  repo:           https://github.com/llcc/layatjpy
+paginate:         5
 
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
