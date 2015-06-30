@@ -75,9 +75,8 @@ layout: default
         Let me know what you think of this article on twitter <a href="http://www.twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a> or comment below!
       </div>
 
-      {% if site.disqus_account %}
+      
       {% include disqus.html %}
-      {% endif %}
 
       <div class="content-panel related clearfix">
         {% for post in site.related_posts limit:1 %}
