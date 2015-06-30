@@ -1,0 +1,17 @@
+---
+title: "编译过程中出现的aux out 等文件的删除问题"
+date: 2015-06-30
+layout: post
+tags: Org
+---
+<p>
+org-mode导出latex时，会出现许多附加文件导致文件目录混乱，解决的一种方法是导入到子目录，眼不见心不烦。另一种方法生成后自动删除。
+</p>
+
+<p>
+对与第一种，应用pdflatex编译时可以设置-aux-directory来转移附加文件，但由于我使用的是platex编译成div，然后通过dvipdfmx将dvi转换成pdf，所以整个过程中的附加文件都不能自动删除。然而在tex文件下时，通过手动emacs的auctex中的Tex-clean命令可以删除这些文件，但是需要调用。具体的删除文件的扩展名均可以在auctex中进行设置。
+</p>
+
+<p>
+上一中方法在org-mode中并不适用，无法调用该clean命令。而我最后在org-mode中发现了一个更方便的命令，完全实现自己的上述需求。通过 <code>org-latex-logfiles-extensions (quote ("aux" "idx" "log" "out" "toc" "nav" "snm" "vrb" "dvi" ".fdb_latexmk" "tex" "fls")))</code> 命令定义好需要删除文件的扩展名后，自动调用 <code>org-export-pdf-remove-logfiles nil</code> 命令直接删除所有冗余文件，我实现的效果是最终文件夹中只剩下org与pdf文件，清爽至极。
+</p>
