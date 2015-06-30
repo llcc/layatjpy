@@ -4,7 +4,7 @@ email: lzhes43@gmail.com
 description: "A blog for Leu Grady."
 baseurl: ""
 url: "http://llcc.github.io/layatjpy/"
-title_description: "A blog based on Carte Noire created by Jekyll. I am a phd student from <a href=\"http://www.kyutech.ac.jp\">Kyutech</a>, mainly doing the research related to Electrical Steel."
+title_description: "A blog based on <a href=\"http://jekyllthemes.org/themes/carte-noire/\">Carte Noire</a> created by <a href=\"http://jekyllrb.com/\">Jekyll</a>. I am a phd student from <a href=\"http://www.kyutech.ac.jp\">Kyutech</a>, mainly doing research about Electrical Steel."
 title_image: "http://www.gravatar.com/avatar/00000000000000000000000000000000?s=500&d=mm"
 google_analytics: "UA-20365477-4"
 disqus_account: leu_grady
