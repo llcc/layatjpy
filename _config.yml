@@ -15,9 +15,7 @@ post_limit: 5
 # Social usernames/URLs
 twitter_username: Leu_Grady
 github_username:  llcc
-linkedin_link: http://carte-noire.jacobtomlinson.co.uk/
-google_plus_link: http://carte-noire.jacobtomlinson.co.uk/
-stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
+stackoverflow_link: Leu_Grady
 
 # Footer
 footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/Leu_grady\">Leu Grady</a>"
