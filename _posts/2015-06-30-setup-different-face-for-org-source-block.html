@@ -1,0 +1,22 @@
+---
+title: "Setup different face for org source block"
+date: 2015-06-30
+layout: post
+tags: Org
+---
+
+<p>
+Sometimes when your org files is jammed with org-babel blocks, it may be difficult to distinguish normal text and blocks. For this situation, setting different face is a good idea. Below cold can implement this kind of functions.
+</p>
+
+{% highlight cl %}
+(setq org-src-fontify-natively t)
+(defface org-block-begin-line
+  '((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
+  "Face used for the line delimiting the begin of source blocks.")
+(defface org-block-background
+  '((t (:background "#FFFFEA"))) "Face used for the source block background.")
+(defface org-block-end-line
+  '((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
+  "Face used for the line delimiting the end of source blocks.")
+{% endhighlight %}
