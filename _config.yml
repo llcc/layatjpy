@@ -15,7 +15,7 @@ post_limit: 5
 # Social usernames/URLs
 twitter_username: Leu_Grady
 github_username:  llcc
-stackoverflow_link: Leu_Grady
+stackoverflow_link: http://stackoverflow.com/users/3173715/leu-grady
 
 # Footer
 footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/Leu_grady\">Leu Grady</a>"
