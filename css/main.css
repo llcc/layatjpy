@@ -65,7 +65,7 @@ a:hover {
 .wrapper {
   margin: 3em auto 2em;
   text-align: left;
-  line-height: 1.2em;
+  line-height: 1.5em;
   -webkit-animation: fadein 1s; /* Safari and Chrome */
        -moz-animation: fadein 1s; /* Firefox */
         -ms-animation: fadein 1s; /* Internet Explorer */
@@ -152,7 +152,7 @@ footer {
 
 .posts li {
   margin-bottom: 5%;
-  line-height: 3em;
+  line-height: 1.5em;
   text-decoration: none;
   font-size: 1em;
 }
@@ -224,7 +224,7 @@ footer {
 
 .meta {
   margin-bottom: 20px;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .post-title-single {
