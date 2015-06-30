@@ -14,8 +14,10 @@ Org-mode support three ways to determine the figure width:
 <ol class="org-ol">
 <li>Define it in <code>org-latex-image-actual-width</code> globally. Assign a LaTeX like value "0.7\\textwidth" to it to make all the figures exported as the corresponding width.
 </li>
+
 <li>The variable can also be setup specifically for files. Add #bind: org-latex-image-actual-width "0.7\\textwidth" to any position of your file. It can make all the figures in this file exported by this width.
 </li>
+
 <li>Add <code>#+latex_attr: 0.7\\textwidth</code> above any figure, this figure will be exported by this width.
 </li>
 </ol>
