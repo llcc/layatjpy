@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Language" content="en"> 
+        <meta name="description" content="Clean, responsive blogging theme for Jekyll">
+        <meta name="viewport" content="width=device-width" />
+        <meta property='og:locale' content='en'/>
+        <meta property='og:title' content='Merryclean - Jekyll Template'/>
+        <meta property='og:description' content='Clean, responsive blogging theme for Jekyll'/>
+        <meta property='og:url' content='http://gillesbertaux.github.io/Merryclean/'/>
+        <meta property='og:site_name' content='Merryclean - Jekyll Template'/>
+        <meta property='og:type' content='website'/>
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@Leu_grady">
+        <meta name="twitter:title" content="Merryclean - Jekyll Template">
+        <meta name="twitter:description" content="Clean, responsive blogging theme for Jekyll">
+        <meta name="twitter:creator" content="@Leu_grady">
+        <link rel="author" href="https://plus.google.com/u/0/+GillesBertaux/" />
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+        <link href='http://fonts.googleapis.com/css?family=Merriweather:400italic,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ site.baseurl }}css/syntax.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}css/main.css">
+    </head>
+
+    <body>
+
+    <div id="progressbar"></div>
+
+    <main class="wrapper">
+
+    	<div class="wrapper-nav">
+
+	    	<ul class="nav">
+	    		{% if page.previous.url %} 
+	    		<li><a href="{{ site.baseurl }}{{page.previous.url}}">&laquo; Previous</a></li>
+	   			{% endif %} 
+	   			<li><a href="{{ site.baseurl }}">Home</a></li>
+	   			{% if page.next.url %} 
+	   			<li><a href="{{ site.baseurl }}{{page.next.url}}">Next &raquo;</a></li>
+	   			{% endif %} 
+	   		</ul>
+
+   		</div>
+
+   		<hr>
+
+		<p class="meta">{{ page.date | date_to_string }}</p>
+
+		<h1 class="post-title-single">{{ page.title }}</h1>
+
+		<article class="post-content">
+		{{ content }}
+		</artile>
+
+		<div class="share">
+
+		  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Leu_grady" data-dnt="true">Tweet</a>
+		  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		  
+		</div>
+
+		<hr>
+
+		{% include footer.html %}
+
+	</main>
+
+	</body>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src='{{ site.baseurl }}javascripts/main.min.js'></script>
+</html>
+
+
