@@ -267,6 +267,9 @@ footer {
   background-color: #eef;
 }
 
+pre {
+    white-space: pre-wrap;
+}
 .post-content pre code {
   font-family: 'Droid Sans Mono', monospace;
   font-weight: 600;
