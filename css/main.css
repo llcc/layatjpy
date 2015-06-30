@@ -289,7 +289,7 @@ pre {
     font-size: .9rem;
     line-height: 1.4;
     white-space: pre;
-    overflow: auto;
+    overflow: scroll;
 }
 
 pre code {
