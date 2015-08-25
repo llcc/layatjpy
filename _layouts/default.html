@@ -6,9 +6,9 @@
 		<title>{% if page.path == 'index.html' %}{{ site.name }}{% else %}{% unless page.id %}{{ site.name }} - {% endunless %}{{ page.title }}{% endif %}</title>
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link href="/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
-		<link rel="stylesheet" href="{{ site.url }}/media/css/style.css" />
-		<link rel="stylesheet" href="{{ site.url }}/media/css/highlight.css" />
-		<script type="text/javascript" src="{{ site.url }}/media/js/jquery-1.7.1.min.js"></script>
+		<link rel="stylesheet" href="{{ site.baseurl }}/media/css/style.css" />
+		<link rel="stylesheet" href="{{ site.baseurl }}/media/css/highlight.css" />
+		<script type="text/javascript" src="{{ site.baseurl }}/media/js/jquery-1.7.1.min.js"></script>
 	</head>
 	<body>
 		<div id="container">
