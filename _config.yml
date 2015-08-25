@@ -1,14 +1,13 @@
 markdown: rdiscount
 permalink: /:title/
-url: http://github.thinkingbar.com
+url: https://github.com/llcc
 highlighter: pygments
-name: 飘过的小牛
-description: 飘过的小牛 | Stop talking, start doing.
-author: niushuai
-email: hnns1990@gmail.com
+name: 先空着
+description: 先空着 | Stop talking, start doing.
+author: llcc
 duoshuo: niushuai
 weibo: 1891858481
-hub: niushuai
+hub: llcc
 safe: true
 paginate: 100
 about: "弱菜一枚。"
