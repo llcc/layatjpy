@@ -1,6 +1,7 @@
 markdown: rdiscount
 permalink: /:title/
-url: https://github.com/llcc
+url: "http://llcc.github.io/layatjpy"
+baseurl: ""
 highlighter: pygments
 name: 先空着
 description: 先空着 | Stop talking, start doing.
