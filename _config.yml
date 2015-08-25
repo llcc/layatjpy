@@ -1,5 +1,5 @@
 markdown: rdiscount
-permalink: /:title/
+permalink: article/:title
 url: "http://llcc.github.io/layatjpy"
 baseurl: "http://llcc.github.io/layatjpy"
 highlighter: pygments
