@@ -1,29 +1,14 @@
-# Site settings
-title: "Leu Grady"
-email: lzhes43@gmail.com
-description: "A blog for Leu Grady."
-baseurl: ""
-url: "http://llcc.github.io/layatjpy/"
-title_description: "A blog based on <a href=\"http://jekyllthemes.org/themes/carte-noire/\">Carte Noire</a> created by <a href=\"http://jekyllrb.com/\">Jekyll</a>. I am a phd student from <a href=\"http://www.kyutech.ac.jp\">Kyutech</a>, mainly doing research about Electrical Steel."
-title_image: "http://www.gravatar.com/avatar/00000000000000000000000000000000?s=500&d=mm"
-google_analytics: "UA-20365477-4"
-disqus_account:
-github_repository: https://github.com/llcc/layatjpy
-addthis_id:
-post_limit: 5
-
-# Social usernames/URLs
-twitter_username: Leu_Grady
-github_username:  llcc
-stackoverflow_link: http://stackoverflow.com/users/3173715/leu-grady
-
-# Footer
-footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/Leu_grady\">Leu Grady</a>"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/llcc/layatjpy\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
-
-# Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-permalink: pretty
-exclude: [vendor]
+markdown: rdiscount
+permalink: /:title/
+url: http://github.thinkingbar.com
+highlighter: pygments
+name: 飘过的小牛
+description: 飘过的小牛 | Stop talking, start doing.
+author: niushuai
+email: hnns1990@gmail.com
+duoshuo: niushuai
+weibo: 1891858481
+hub: niushuai
+safe: true
+paginate: 100
+about: "弱菜一枚。"
