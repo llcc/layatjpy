@@ -1,8 +1,8 @@
 ---
 title: "Display random quotes in Emacs frame"
 date: 2016-05-29
-layout: 
-tags: ARCHIVE
+layout: post
+categories: [emacs]
 ---
 <p>
 The variable <code>frame-title-format</code> can be customized to show various stuffs. Today, I will give a short tutorial to let Emacs frame show random quotes each time emacs is launched.
@@ -71,7 +71,7 @@ Let's define a list called <code>quotes</code> which stores the quotes at first.
 {% endhighlight %}</li>
 
 <li><p>
-Next we should take one quote each time to display it. The varible can be customized as followed:
+Next we should take one quote each time to display it. The variable can be customized as followed:
 </p>
 
 {% highlight cl %}
