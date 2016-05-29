@@ -1,8 +1,8 @@
 ---
 title: "关于图片预览问题"
 date: 2016-05-29
-layout: post
-categories: [emacs]
+layout: 
+tags: Org
 ---
 <p>
 在windows下会遇到emacs不支持png和jpg的问题，主要是由于缺少 <code>libpng14-14.dll</code> 和 <code>libjpg62.dll</code> ，因此需要下载该文件，并将它们置于系统可搜索到的文件目录下，emacs即可支持该类型文件。
