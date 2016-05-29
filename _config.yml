@@ -5,11 +5,11 @@ github: https://github.com/llcc
 about: An amateur in Emacs, but with enthusiastic
 urls:
     - text: About Me
-      url: /about/
+      url: /layatjpy/about/
     - text: Github
       url: https://github.com/llcc
     - text: XML Feed
-      url: /feed.xml
+      url: /layatjpy/feed.xml
 url: "https://layatjpy.github.io"
 baseurl: ""
 paginate: 20
