@@ -1,0 +1,42 @@
+---
+title: "关于图片预览问题"
+date: 2016-05-29
+layout: 
+tags: Org
+---
+<p>
+在windows下会遇到emacs不支持png和jpg的问题，主要是由于缺少 <code>libpng14-14.dll</code> 和 <code>libjpg62.dll</code> ，因此需要下载该文件，并将它们置于系统可搜索到的文件目录下，emacs即可支持该类型文件。
+参考该网页：<a href="http://kelvinh.github.io/blog/2013/03/26/emacs-image-support-on-windows/">让 Windows 版本的 Emacs 支持图片直接显示</a>
+</p>
+
+<p>
+以下代码可以用于验证emacs是否支持该类型图片。
+</p>
+
+{% highlight cl %}
+(print image-library-alist)
+(image-type-available-p 'png)
+(image-type-available-p 'jpeg)
+(image-type-available-p 'gif)
+(image-type-available-p 'tiff)
+(image-type-available-p 'xbm)
+(image-type-available-p 'xpm)
+(image-type-available-p 'pdf)
+{% endhighlight %}
+
+<p>
+org-mode有一个很好的功能就是通过org-latex-preview-fragment命令可以实现org-mode latex的实时预览。具体过程是：
+</p>
+<ol class="org-ol">
+<li>通过将程序块导出到tex，编译成dvi，然后通过dvipng转换成png图片进行预览。</li>
+<li>通过imagemagick将编译成的pdf转换成png进行预览。</li>
+</ol>
+
+<p>
+可以通过 <code>setq org-latex-create-formula-image-program 'imagemagick</code> 来选择dvipng和imagemagick。dvipng在tex32的latex包中已包含。windows的imagemagick可以自行下载安装，通过convert命令转换即可，安装时即在系统path中添加了命令的路径。导出tex的过程涉及自动引入的package和选择的documentclass的问题，分别在org-format-latex-header中设置，然后通过添加[NO-DEFAULT-PACKAGES]与[NO-PACKAGES]命令来选择是否自动添加一些默认的包，这些包可以在org-latex-default-class中设置，设置方法是 <code>M-x customize-option</code> 输入命令回车然后修改即可。由于我的公式中存在 *日语字符*和编号，所以我documentclass设置为jsarticle，默认包设置为array以满足以上功能。问题具体描述是：
+</p>
+
+<ol class="org-ol">
+<li>dvipng时可以建立lxpng目录，但是里面没有文件，并且org buffer为空方格。</li>
+<li>imagemagick时提示.pdf文件在windows的temp目录先未成功建立。针对上面的问题，我定位到该目录下，在org-mode下通过C-c C-x C-l，发现tex文件已经建立，但未有div和pdf存在，相应的.log文件显示tex编译失败。那么肯定就是tex编译过程中出现问题了，然后打开该tex文件，发现引入宏包和documentclass存在问题，通过以上描述的内容修正后，预览成功。</li>
+</ol>
