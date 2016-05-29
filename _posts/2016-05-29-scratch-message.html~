@@ -1,8 +1,8 @@
 ---
 title: "scratch message"
 date: 2016-05-29
-layout: post
-categories: [emacs]
+layout: 
+tags: ARCHIVE
 ---
 {% highlight cl %}
 (defvar scratch-message-quotes
