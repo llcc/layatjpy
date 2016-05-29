@@ -1,11 +1,20 @@
 ---
-title: "scratch message"
+title: "Display random quotes in Emacs frame"
 date: 2016-05-29
-layout: post
-categories: [emacs]
+layout: 
+tags: ARCHIVE
 ---
+<p>
+The variable <code>frame-title-format</code> can be customized to show various stuffs. Today, I will give a short tutorial to let Emacs frame show random quotes each time emacs is launched.
+</p>
+
+<ol class="org-ol">
+<li><p>
+Let's define a list called <code>quotes</code> which stores the quotes at first. I just grabbed those quotes from an emacs package <a href="https://github.com/thisirs/scratch-message">thisirs/scratch-message</a>.
+</p>
+
 {% highlight cl %}
-(defvar scratch-message-quotes
+(defvar quotes
   '("\"You can do anything, but not everything.\"       - David Allen"
     "\"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.\"    - Antoine de Saint-Exupéry"
     "\"The richest man is not he who has the most, but he who needs the least.\"    - Unknown Author"
@@ -59,6 +68,20 @@ categories: [emacs]
     "\"Imagination was given to man to compensate him for what he is not, and a sense of humor was provided to console him for what he is.\"    - Oscar Wilde"
     "\"When a person can no longer laugh at himself, it is time for others to laugh at him.\"    - Thomas Szasz")
   "Some quotes taken from https://litemind.com/best-famous-quotes/")
+{% endhighlight %}</li>
 
-(setq frame-title-format (nth (random (length scratch-message-quotes)) scratch-message-quotes))
-{% endhighlight %}
+<li><p>
+Next we should take one quote each time to display it. The varible can be customized as followed:
+</p>
+
+{% highlight cl %}
+(setq frame-title-format
+   (nth (random (length quotes)) quotes))
+{% endhighlight %}</li>
+</ol>
+
+
+<p>
+Paste the above code into your init file, and you will see the effect next time you launch your emacs.
+Any improvement and advice are appreciated.
+</p>
