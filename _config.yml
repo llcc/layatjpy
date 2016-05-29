@@ -10,7 +10,7 @@ urls:
       url: https://github.com/llcc
     - text: XML Feed
       url: /layatjpy/feed.xml
-url: "https://layatjpy.github.io/layatjpy"
+url: "https://llcc.github.io/layatjpy"
 baseurl: "layatjpy"
 paginate: 20
 per_page: 20
