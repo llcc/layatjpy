@@ -1,0 +1,49 @@
+---
+title: "org-mode导出到latex中的图片，表格，字符问题"
+date: 2016-05-29
+layout: post
+tags: Org
+---
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. <span class="done DONE">DONE</span> Exported image width from org-mode to LaTeX</a></li>
+</ul>
+</div>
+</div>
+<p>
+我通过 <code>org-latex-image-default-width '.7\textwidth</code> 命令将导出的图片宽度统一定义成0.7倍行宽，所以在整个org文件中无需添加 ：width 定义图片的大小。同样可以通过该命令特殊指定某个图片的宽度，export将引用自定义width。图片的位置也可以通过 <code>org-latex-default-figure-position '!htbp</code> 进行设置。
+</p>
+
+<p>
+科技文献中，表格均为三线表，latex中通过引用booktabs宏包添加toprule，centerrole和bottomrule即可实现该功能。org-mode中更为简单，只需要通过 <code>org-latex-tables-booktabs t</code> 开启booktabs功能即可默认实现该功能，同样不需要在org文件中指定。
+</p>
+
+<p>
+由于org-mode可以自动识别_ 与 ^ 可以实现上角和下角的输出，但是不知道什么原因，有时候_ 会造成{\text}的问题，仍未解决。但是为了通过=org-latex-preview-fragment= 实现预览功能，将latex字符包在$ $中比较合适。
+</p>
+
+<p>
+上述的问题已经成功解决，主要是因为在int-org.el中将相应功能关闭掉了。打开之后就一切正常了。
+</p>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> <span class="done DONE">DONE</span> Exported image width from org-mode to LaTeX</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I am using org-mode to typeset my manuscript and reports for almost one year. Because all my writings always contains many figures, determining the width of exported figures seems like a must-do work for me.
+</p>
+
+<p>
+Org-mode support three ways to determine the figure width:
+</p>
+<ol class="org-ol">
+<li>Define it in <code>org-latex-image-actual-width</code> globally. Assign a LaTeX like value <code>0.7\\textwidth</code> to it to make all the figures exported as the corresponding width.</li>
+
+<li>The variable can also be setup specifically for files. Add <code>#+bind: org-latex-image-actual-width '0.7\\textwidth'</code> to any position of your file. It can make all the figures in this file exported by this width.</li>
+
+<li>Add <code>#+latex_attr: 0.7\\textwidth</code> above any figure, this figure will be exported by this width.</li>
+</ol>
+</div>
+</div>
